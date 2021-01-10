@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Fact</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="gawrGuraFacts.css">
+</head>
+<body id="bg-image">
+    <h1 id="title">Shark Facts!</h1>
+    <main class="factSection">
+        <p class="fact">a</p>
+        <button onclick="window.location.reload();" class="refreshButton">Refresh Page</button>
+    </main>
+
+
+    <!-- Code for a new fact per refresh. Need to edit to do upon every button press. -->
+    <script>
+        fetch("gawrGuraFacts.json")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.querySelector(".fact").innerText = data.fact[Math.floor(Math.random() * 24)];
+            })
+    </script>
+</body>
+</html>

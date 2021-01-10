@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: blue;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+#title {
+  background-color: aqua;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 3rem;
+  height: 5rem;
+}
+
+.factSection {
+  display: grid;
+  background: url("guraBG.jpg");
+  background-size: cover;
+  background-position: center center;
+  min-height: calc(100vh - 5rem);
+  grid-template-areas: ". . fact . ." ". . refresh . .";
+  align-content: stretch;
+}
+
+.fact {
+  grid-area: fact;
+  margin-right: 20%;
+  margin-left: 20%;
+  text-align: center;
+  background: lightcyan;
+}
+
+.refreshButton {
+  grid-area: refresh;
+  height: 2rem;
+  width: 10rem;
+}
