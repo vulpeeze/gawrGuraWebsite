@@ -1,44 +1,100 @@
 * {
-  box-sizing: border-box;
-}
-
-body {
-  background: blue;
-  height: 100%;
-  margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url("guraBG.jpg");
+  background-size: contain;
 }
 
-#title {
+.withoutFooter {
+  min-height: calc(100vh - 5rem);
+}
+
+header {
+  min-height: 20%;
   background-color: aqua;
+  margin: 1rem;
   text-align: center;
-  margin: 0;
-  padding: 10px;
-  font-size: 3rem;
-  height: 5rem;
 }
 
 .factSection {
-  display: grid;
-  background: url("guraBG.jpg");
-  background-size: cover;
-  background-position: center center;
-  min-height: calc(100vh - 5rem);
-  grid-template-areas: ". . fact . ." ". . refresh . .";
-  align-content: stretch;
+  background-color: rgba(224, 255, 255, 0.75);
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  min-height: 50vh;
 }
 
 .fact {
-  grid-area: fact;
-  margin-right: 20%;
-  margin-left: 20%;
-  text-align: center;
-  background: lightcyan;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  min-height: 40vh;
 }
 
 .refreshButton {
-  grid-area: refresh;
-  height: 2rem;
-  width: 10rem;
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.refreshButton:hover {
+  color: white;
+}
+
+.refreshButton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: darkblue;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.refreshButton:hover::before {
+  height: 180%;
+}
+
+.factLinks {
+  text-align: center;
+  background-color: lightskyblue;
+  padding: 1rem;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer {
+  background-color: blue;
+  text-align: center;
+  padding-top: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  height: 3rem;
+}
+
+footer > p > a {
+  text-decoration: none;
+  color: white;
+  text-decoration: underline;
+}
+
+footer > p > a:visited {
+  color: white;
 }

@@ -7,14 +7,32 @@
     <link rel="stylesheet" href="gawrGuraFacts.css">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
-<body id="bg-image">
-    <h1 id="title">Shark Facts!</h1>
-    <main class="factSection">
-        <p class="fact">a</p>
-        <button onclick="window.location.reload();" class="refreshButton">Refresh Page</button>
-    </main>
-    <p style="color: white;">By Vulpeeze</p>
 
+<body>
+    <div class="withoutFooter">
+        <header class="factHeader">
+            <h1 id="title">Shark Facts!</h1>
+        </header>
+
+        <main class="factSection">
+            <p class="fact">a</p>
+            <button onclick="window.location.reload();" class="refreshButton">Refresh Page</button>
+        </main>
+
+        <section class="factLinks">
+            <ul>
+                <li>
+                    <a href="mailto:vulpeeze@gmail.com" class="link">Submit Facts</a></li>
+                <li>
+                    <a href="https://ko-fi.com/vulpeeze" class="link">Support me with a ko-fi</a></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p class="factFooter">Brought to you by <a href="https://twitter.com/vulpeeze">Vulpeeze</a></p>
+    </footer>
 
     <!-- Code for a new fact per refresh. Need to edit to do upon every button press. -->
     <script>
