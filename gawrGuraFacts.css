@@ -37,6 +37,7 @@ header {
 
 .refreshButton {
   border: 1px solid #3498db;
+  border-radius: 12px 12px 12px 12px;
   background: none;
   padding: 10px 20px;
   font-size: 20px;
@@ -74,6 +75,22 @@ header {
   padding: 1rem;
   margin-left: 30%;
   margin-right: 30%;
+}
+
+.factLinks > ul > li {
+  margin-bottom: 0.5rem;
+}
+
+.link > button {
+  border-radius: 12px;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: turquoise;
+  border: 0.2px rgb(35, 122, 114) solid;
+}
+
+.link > button:hover {
+  background-color: rgb(69, 236, 220);
 }
 
 ul {
