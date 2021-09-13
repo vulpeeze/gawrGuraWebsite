@@ -44,6 +44,8 @@
             .then(response => response.json())
             .then(data => {
                 document.querySelector(".fact").innerText = data.fact[Math.floor(Math.random() * 24)];
+                var audio = new Audio("gawr-gura-a.mp3");
+                audio.play();
             })
         }
     </script>
